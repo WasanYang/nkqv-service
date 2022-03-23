@@ -5,7 +5,6 @@ import { ConfigService } from '@nestjs/config';
 export class AppService {
   constructor(private configService: ConfigService) {}
   getHello(): string {
-    console.log(this.configService.get<string>('JWT_SECRET'));
     return 'Hello World!';
   }
 }
